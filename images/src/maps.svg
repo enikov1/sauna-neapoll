@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+  <g id="maps" transform="translate(-2.5 -2.5)" opacity="0.98">
+    <path id="Контур_26" data-name="Контур 26" d="M19.077,8.469c0,4.846-5.538,9.069-5.538,9.069S8,13.315,8,8.469a5.539,5.539,0,0,1,11.077,0Z" transform="translate(-1.538)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <circle id="Эллипс_1" data-name="Эллипс 1" cx="1" cy="1" r="1" transform="translate(11 7)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Контур_27" data-name="Контур 27" d="M14.215,21h4.015L21,26.538H3L5.769,21H9.785" transform="translate(0 -5.538)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

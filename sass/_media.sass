@@ -1,0 +1,313 @@
+@import "_vars"
+@import "_fonts"
+@import "_mix"
+
+@media (min-width: 640px) and (max-width: 768px)
+	.smart-nav-active .navigation-smart, .smart-nav-active .navigation-smart::before, .smart-nav-active .navigation-smart::after
+		background-color: $global
+	.smart-nav-active .navigation-smart
+		background-color: transparent
+	.smart-nav-active .navigation-smart::before
+		transform: rotate(45deg)
+	.smart-nav-active .navigation-smart::after
+		transform: rotate(-45deg)
+		top: 10px
+	.wrap-fix
+		max-width: 100%
+	.header
+		//height: auto
+		padding: 20px 15px
+		&-left
+			justify-content: flex-end
+			flex-direction: column
+			&_map
+				margin-right: 0
+				text-align: center
+				margin-bottom: 25px
+	.header-info
+		&::before, &::after
+			width: 100%
+		&::before
+			left: 0
+			right: auto
+		&::after
+			bottom: 0
+			top: auto
+		&-fix
+			height: 620px !important
+			flex-direction: column
+		&_left, &_right
+			font-size: 32px
+		&_left
+			padding-right: 0
+		&_right
+			padding-left: 0
+		&_btn
+			top: 50%
+			background-color: transparent
+			box-shadow: 0 0 0 transparent
+			width: auto
+			height: auto
+			margin-left: 0
+			transform: rotate(0deg)
+			margin-top: -30px
+			margin-left: -111px
+			.btn-header
+				transform: rotate(0deg)
+	.center-text .title
+		font-size: 28px
+		line-height: 38px
+	.center-text .text
+		line-height: 30px
+	.col-item-action
+		padding: 20px 10px
+		&_text
+			padding-left: 90px
+	.bg-gray .wrap-fix
+		justify-content: space-around
+	.images-item
+		margin: 0 20px
+
+	.reviews_wrap .reviews_item-info
+		width: 70%
+		p
+			font-size: 17px
+	.footer
+		padding: 40px 20px
+		&_left
+			margin-right: 85px
+	.speedbar_header
+		padding: 0 85px
+	.speedbar_header h1, .speedbar_header h2, .speedbar_header h3, .speedbar_header h4
+		font-size: 18px
+	.action-wrap
+		padding: 0 15px
+	.price-left img
+		height: auto !important
+
+	.tabs-ul
+		margin-bottom: 40px
+
+	.col-item-action
+		flex-direction: column
+		height: auto !important
+		width: 100%
+		padding: 20px 36px
+		&_img
+			top: 30px
+
+	.action-fix
+		flex-direction: column
+
+@media (max-width: 480px)
+	.smart-nav-active .navigation-smart, .smart-nav-active .navigation-smart::before, .smart-nav-active .navigation-smart::after
+		background-color: $global
+	.smart-nav-active .navigation-smart
+		background-color: transparent
+	.smart-nav-active .navigation-smart::before
+		transform: rotate(45deg)
+	.smart-nav-active .navigation-smart::after
+		transform: rotate(-45deg)
+		top: 10px
+	.col-item-action
+		flex-direction: column
+		height: auto
+		width: 100%
+		padding: 20px 36px
+		&_img
+			top: 30px
+	.wrap-fix
+		max-width: 100%
+	.speedbar_header
+		padding: 0 85px
+	.speedbar_header h1, .speedbar_header h2, .speedbar_header h3, .speedbar_header h4
+		font-size: 18px
+	.action-wrap
+		padding: 0 15px
+	.header
+		height: auto
+		padding: 20px 15px
+		margin-bottom: 35px
+		&::before
+			height: 100%
+		&-logo
+			margin-bottom: 20px
+		&-left
+			flex-direction: column
+			&_map
+				margin-right: 0
+				text-align: center
+				.text-phone
+					margin-bottom: 20px
+					font-size: 24px
+			&_phone
+				mar
+	.action-fix, .header-fix
+		flex-direction: column 
+	.smart-nav
+		z-index: 10000
+		width: 36px
+		height: 30px
+		cursor: pointer
+		position: absolute
+		top: 10px
+		right: 10px
+		display: block
+	.navigation
+		display: none
+		position: fixed
+		z-index: 9999
+		top: -5px
+		left: 0
+		width: 100%
+		background-color: #ffffff
+		justify-content: flex-start
+		padding: 20px
+		&-smart
+			top: 10px
+			position: absolute
+			height: 6px
+			width: 36px
+			border-radius: 4px
+			background-color: #ffffff
+			cursor: pointer
+			&::after
+				content: ""
+				position: absolute
+				top: -10px
+				height: 6px
+				width: 36px
+				background-color: #ffffff
+				border-radius: 4px
+			&::before
+				content: ""
+				position: absolute
+				bottom: -10px
+				height: 6px
+				width: 36px
+				background-color: #ffffff
+				border-radius: 4px
+		ul
+			flex-direction: column
+			li a
+				font-size: 17px
+
+	.header-info
+		&::before, &::after
+			width: 100%
+		&::before
+			left: 0
+			right: auto
+		&::after
+			bottom: 0
+			top: auto
+		&-fix
+			height: 620px !important
+			flex-direction: column
+		&_left, &_right
+			font-size: 32px
+		&_left
+			padding-right: 0
+		&_right
+			padding-left: 0
+		&_btn
+			top: 50%
+			background-color: transparent
+			box-shadow: 0 0 0 transparent
+			width: auto
+			height: auto
+			margin-left: 0
+			transform: rotate(0deg)
+			margin-top: -30px
+			margin-left: -111px
+			.btn-header
+				transform: rotate(0deg)
+	.center-text .title
+		font-size: 28px
+		line-height: 38px
+	.center-text .text
+		line-height: 30px
+
+	.bg-gray .wrap-fix
+		flex-direction: column
+		align-items: center
+	.images
+		padding: 0 15px
+		flex-direction: column
+	.reviews_header h1, .reviews_header h2, .reviews_header h3, .reviews_header h4, .reviews_header h5, .reviews_header h6
+		font-size: 30px
+	.reviews_wrap
+		padding: 0 15px
+	.reviews_item
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		width: 100%
+		&-info
+			width: 100% !important
+			text-align: center
+			p
+				line-height: 30px !important
+				font-size: 16px !important
+	.footer
+		padding: 40px 15px
+		&_left
+			margin-right: 0
+		&_right
+			display: none
+		.wrap-fix
+			flex-direction: column
+	.foot-copy, .foot-map
+		font-size: 16px
+		line-height: 22px
+	.popup-phone
+		width: 100%
+		left: 0
+		margin-left: 0
+	.price
+		padding: 0 15px
+	.price-item
+		flex-direction: column
+	.price-right
+		padding: 20px
+	.price-left, .price-right
+		width: 100%
+	.price-btn
+		text-align: center
+
+	.tabs-ul
+		flex-direction: column
+		margin-bottom: 40px
+		&-item
+			width: 100%
+			&::after, &::before
+				display: none
+			&:first-child
+				margin-right: 0
+				padding-right: 0
+				justify-content: center
+			&:last-child
+				margin-left: 0
+				padding-left: 0
+				justify-content: center
+	.tabs-content p
+		font-size: 18px
+		line-height: 32px
+
+	.price-nav ul
+		flex-direction: column
+		align-items: center
+		li
+			margin-right: 0
+			margin-bottom: 20px
+			font-size: 18px
+			&:last-child
+				margin-bottom: 0
+	.price-list
+		width: 100%
+		.item
+			margin-bottom: 50px
+	.price-list .item span
+		line-height: 24px
+	.price-list .item::before
+		margin-top: 0

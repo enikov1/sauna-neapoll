@@ -1,0 +1,912 @@
+@import "_vars"
+@import "_fonts"
+@import "_mix"
+@import "owl.carousel/owl.carousel"
+@import "jquery.fancybox.sass"
+
+*
+	margin: 0
+	padding: 0
+	border: 0
+	box-sizing: border-box
+
+a
+	text-decoration: none
+
+ol, ul
+	list-style: none
+
+img
+	max-width: 100%
+	height: auto
+
+html
+	height: 100%
+
+body
+	position: relative
+	font-size: 16px
+	font-family: 'Montserrat', sans-serif
+	line-height: 1
+	font-weight: 400
+	
+.wrap-fix
+	max-width: 1260px
+	margin: 0 auto
+
+.header
+	position: relative
+	height: 224px
+	background-color: rgb(137, 0, 255)
+	//background: url(../images/dest/header-bg.jpg) no-repeat
+	background-size: cover
+	&-logo
+		z-index: 1
+	// &::before
+	// 	content: ""
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 0
+	// 	width: 100%
+	// 	height: 224px
+	// 	background: rgb(39,39,39)
+	// 	background: linear-gradient(-270deg, rgba(39,39,39,0.8) 0%, rgba(99,99,99,.5) 65%, rgba(56,56,56,0.5) 100%)
+
+.header-fix
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: inherit
+.header-left
+	display: flex
+	flex-wrap: wrap
+	&_map
+		position: relative
+		margin-right: 44px
+		display: flex
+		flex-direction: column
+		text-align: right
+		span
+			color: #ffffff
+			font-weight: 500
+		img
+			position: absolute
+			top: -2px
+			left: -28px
+		.map-text
+			font-size: 15px
+		.text-phone
+			margin-top: 14px
+			font-size: 18px
+			font-weight: 700
+	&_phone
+		padding-right: 15px
+.phone-text
+	position: relative
+	padding: 14px 16px 15px 0
+	color: #ffffff
+	cursor: pointer
+	display: flex
+	align-items: center
+	&::before
+		content: ""
+		position: absolute
+		top: -2px
+		right: 0
+		width: 50%
+		height: 100%
+		z-index: 0
+		border-top: 2px solid #ffffff
+		border-right: 2px solid #ffffff
+		border-bottom: 2px solid #ffffff
+		border-radius: 4px
+	img
+		margin-left: 12px
+
+.smart-nav
+	display: none
+
+.navigation
+	margin: 5px auto 15px auto
+	display: flex
+	justify-content: center
+	ul
+		display: flex
+		flex-wrap: wrap
+		li
+			&:last-child
+				margin-right: 0
+			a, span
+				display: block
+				padding: 20px 17px
+				color: #6B00C7
+				font-size: 17px
+				border-bottom: 2px solid transparent
+				&:hover
+					color: $text-global
+					border-color: $text-global
+					transition: all 0.5s ease-out
+				&:not(:hover)
+					transition: all 0.2s ease-out
+			span
+				color: $text-global
+				border-color: $text-global
+
+.header-info
+	position: relative
+	margin: 0 auto
+	background-color: rgba(137,0,255,.35)
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		height: 310px
+		width: 50%
+		background: url(../images/dest/1.jpg) no-repeat center
+		background-size: cover
+		z-index: -1
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		height: 310px
+		width: 50%
+		background: url(../images/dest/2.jpg) no-repeat center
+		background-size: cover
+		z-index: -1
+	.header-info-fix
+		position: relative
+		display: flex
+		height: 310px
+		overflow: hidden
+	&_left, &_right
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		font-family: 'Roboto Slab', sans-serif
+		color: #ffffff
+		text-transform: uppercase
+		font-size: 38px
+		font-weight: 900
+		text-shadow: 0 3px 6px rgba(67,0,36,.3)
+	&_btn
+		position: absolute
+		top: 38px
+		left: 50%
+		margin-left: -117px
+		width: 234px
+		height: 234px
+		background-color: #ffffff
+		transform: rotate(45deg)
+		display: flex
+		justify-content: center
+		align-items: center
+		box-shadow: 0 5px 100px rgba(0,0,0,.25)
+		.btn-header
+			position: relative
+			cursor: pointer
+			transform: rotate(-45deg)
+			padding: 0 19px
+			height: 60px
+			line-height: 60px
+			background-color: #8900FF
+			color: #ffffff
+			text-transform: uppercase
+			font-size: 17px
+			font-weight: 600
+			&:hover
+				background-color: $global
+			&:hover::after
+				border-right: 31px solid $global
+			&:hover::before
+				border-left: 31px solid $global
+			&::after
+				content: ""
+				position: absolute
+				top: 0
+				left: -30.4px
+				width: 0
+				height: 0
+				border-top: 30px solid transparent
+				border-bottom: 30px solid transparent
+				border-right: 31px solid #8900FF
+			&::before
+				content: ""
+				position: absolute
+				top: 0
+				right: -30.4px
+				width: 0
+				height: 0
+				border-top: 30px solid transparent
+				border-bottom: 30px solid transparent
+				border-left: 31px solid #8900FF
+
+	&_left
+		height: inherit
+		padding-right: 135px
+		//background: url(../images/dest/1.jpg) no-repeat
+	&_right
+		height: inherit
+		padding-left: 135px
+		//background: url(../images/dest/2.jpg) no-repeat
+
+.icon
+	display: inline-block
+	vertical-align: middle
+.icon-time-bonus
+	font-size: 20px
+	background: url(../images/dest/time-icno.svg)
+.action-fix
+	display: flex
+	margin-top: 42px
+	margin-bottom: 78px
+	align-items: center
+	overflow: hidden
+
+.col-item-action
+	position: relative
+	display: flex
+	align-items: center
+	height: 230px
+	width: 33.333%
+	//background-color: rgba(131,103,123,.12)
+	background-color: #8900FF
+	padding: 0 36px
+	&_img
+		position: absolute
+		top: 64px
+		left: 36px
+		pointer-events: none
+	&_text
+		padding-left: 76px
+		.action-text_top
+			display: block
+			font-size: 22px
+			color: #ffffff
+			font-weight: 900
+			font-family: 'Roboto Slab', sans-serif
+			margin-bottom: 18px
+		.action-text_bottom
+			font-size: 15px
+			line-height: 26px
+			color: #ffffff
+.col-item-action:nth-child(2)
+	height: 260px
+	position: relative
+	background-color: #7701DC
+	// &::before
+	// 	content: ""
+	// 	position: absolute
+	// 	top: 6%
+	// 	left: -10px
+	// 	width: 10px
+	// 	height: 88%
+	// 	background-color: rgba(226,220,229,.4)
+	// &::after
+	// 	content: ""
+	// 	position: absolute
+	// 	top: 6%
+	// 	right: -10px
+	// 	width: 10px
+	// 	height: 88%
+	// 	background-color: rgba(226,220,229,.4)
+
+.center-text
+	display: flex
+	flex-direction: column
+	text-align: center
+	width: 80%
+	margin: 0 auto 70px auto
+	.title
+		font-family: 'Roboto Slab', sans-serif
+		font-size: 32px
+		color: $text-global
+		margin-bottom: 42px
+	.text
+		font-family: 'Roboto Slab', sans-serif
+		font-size: 18px
+		color: #000000
+		line-height: 26px
+
+.bg-gray
+	position: relative
+	background-color: rgb(137, 0, 255)
+	padding: 52px 0 10px 0
+	margin: 70px 0
+	.wrap-fix
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&::before
+		content: ""
+		position: absolute
+		top: -32px
+		left: 0
+		width: 100%
+		height: 32px
+		background: url(../images/dest/border.png) repeat-x
+	&::after
+		content: ""
+		position: absolute
+		bottom: -32px
+		left: 0
+		width: 100%
+		height: 32px
+		transform: rotate(180deg)
+		background: url(../images/dest/border.png) repeat-x
+
+.item-block-pr
+	width: 260px
+	margin-bottom: 42px
+	background-color: #ffffff
+	padding: 18px 28px
+	display: flex
+	flex-direction: column
+	align-items: center
+	&_img
+		margin-bottom: 20px
+	&_top
+		position: relative
+		font-family: 'Roboto Slab', sans-serif
+		font-size: 22px
+		text-transform: uppercase
+		color: $text-global
+		font-weight: 500
+		padding-bottom: 20px
+		margin-bottom: 22px
+		text-align: center
+		&::before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 10%
+			width: 80%
+			height: 3px
+			background-color: rgba(67,0,36,.25)
+	&_bottom
+		text-align: center
+		line-height: 30px
+
+.reviews
+	&_header
+		text-align: center
+		margin-bottom: 30px
+		h1,h2,h3,h4,h5,h6
+			color: $text-global
+			font-size: 38px
+			font-family: 'Roboto Slab', sans-serif
+	&_wrap
+		padding: 0 60px
+		.reviews_item
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			&-img, .foto
+				position: relative
+				display: block
+				width: 180px
+				height: 180px
+				border-radius: 50%
+				background-color: #F2F2F2
+				box-shadow: 0 10px 20px rgba(67,0,36,.05)
+				//margin-right: 40px
+				img
+					width: 180px
+					height: 180px
+					display: block
+				.icon-user-foto
+					position: absolute
+					width: 76px
+					height: 76px
+					top: 50%
+					left: 50%
+					margin-top: -38px
+					margin-left: -38px
+					background: url(../images/dest/user-foto.svg)
+			&-info
+				width: 75%
+				padding-top: 26px
+				span
+					font-family: 'Roboto Slab', sans-serif
+					margin-bottom: 16px
+					display: block
+					font-size: 20px
+					color: #8900FF
+				p
+					color: #000000
+					font-size: 15px
+					line-height: 24px
+
+.images
+	margin: 30px auto
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	&-item
+		height: 100%
+		max-height: 260px
+		margin-bottom: 20px
+		max-width: 400px
+		img
+			background-size: cover
+			width: 400px
+			height: 100%
+			max-height: 260px
+
+.article
+	text-align: center
+	&-text
+		text-align: left
+		line-height: 26px
+		color: #000
+		a
+			color: $global
+
+.form-add
+	margin: 30px auto
+	&-header
+		font-size: 22px
+		color: $global
+		margin-bottom: 22px
+	&-wrap
+		display: flex
+		flex-direction: column
+		width: 40%
+		.field
+			width: 100%
+			margin-bottom: 20px
+			input[type="text"]
+				width: 100%
+				border: 1px solid $global
+				border-radius: 4px
+				padding: 10px 20px
+				font-size: 15px
+				@include placeholder($global)
+			textarea
+				width: 100%
+				border: 1px solid $global
+				border-radius: 4px
+				padding: 10px 20px
+				font-size: 15px
+				font-family: Montserrat,sans-serif
+				resize: vertical
+				min-height: 80px
+				max-height: 350px
+				@include placeholder($global)
+		.text-pre
+			font-size: 14px
+		.field-btn
+			margin-top: 15px
+			.btn
+				background-color: $global
+				border-radius: 4px
+				padding: 14px 30px
+				color: #ffffff
+				cursor: pointer
+				border: 2px solid $global
+				&:hover
+					background-color: #ffffff
+					color: $global
+
+.footer
+	position: relative
+	padding: 40px 0
+	background-color: #8900FF
+	.wrap-fix
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		height: inherit
+
+.footer_left
+	position: relative
+	display: flex
+	flex-direction: column
+	margin-right: 180px
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: #E1D0DC
+		z-index: -1
+
+.footer_right
+	display: flex
+	ul
+		margin-right: 80px
+	ul li
+		margin-bottom: 22px
+		a
+			font-size: 15px
+			color: #ffffff
+		.active, a:hover
+			text-decoration: underline
+
+.foot-logo
+	margin-bottom: 12px
+
+.foot-copy, .foot-map
+	color: #ffffff
+	font-size: 15px
+	span
+		display: block
+
+.foot-copy
+	margin-bottom: 16px
+
+.foot-map span
+	margin-bottom: 16px
+
+.foot-map span:last-child
+	margin-bottom: 0
+	font-size: 18px
+
+.footer_right-arrow
+	position: absolute
+	cursor: pointer
+	top: 50%
+	right: 35px
+	width: 56px
+	height: 54px
+	background: url(../images/dest/toparrow.svg) no-repeat
+	&:hover
+		top: 48%
+		transition: all 0.3s ease-in
+	&:not(:hover)
+		transition: all 0.3 ease-out
+
+.popup-phone
+	opacity: 0
+	width: 480px
+	position: fixed
+	display: none
+	top: 0
+	left: 50%
+	margin-left: -240px
+	background-color: #ffffff
+	box-shadow: 0 10px 25px rgba(0,0,0,.25)
+	border-radius: 4px
+	padding: 26px 66px
+	text-align: center
+	&_header
+		font-family: 'Roboto Slab', sans-serif
+		font-size: 24px
+		color: $text-global
+		font-weight: bold
+		position: relative
+		padding-bottom: 20px
+		&::before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 50%
+			margin-left: -25%
+			width: 50%
+			height: 4px
+			background-color: rgba(67,0,36,.1)
+	&_form
+		margin-top: 34px
+		display: flex
+		flex-direction: column
+		align-items: center
+		.field-text
+			width: 100%
+			outline: none
+			padding: 26px 30px
+			border-radius: 6px
+			border: 1px solid $text-global
+			color: $text-global
+			font-family: 'Roboto Slab', sans-serif
+			font-size: 16px
+			margin-bottom: 30px
+			&:focus
+				border-color: #6E0F42
+			&:last-child
+				margin-bottom: 0
+			@include placeholder($text-global)
+		.filed-btn
+			cursor: pointer
+			width: 80%
+			padding: 16px 72px
+			border-radius: 4px
+			color: #ffffff
+			background-color: $text-global
+			font-family: 'Roboto Slab', sans-serif
+			font-size: 16px
+			border-bottom: 3px solid rgb(107, 0, 199)
+			&:hover
+				background-color: rgb(107, 0, 199)
+	&_close
+		cursor: pointer
+		position: absolute
+		width: 17px
+		height: 17px
+		top: 16px
+		right: 20px
+		background: url(../images/dest/close.svg) no-repeat
+		&:hover
+			transform: rotate(90deg)
+			transition: all 0.2s ease-out
+
+.owl-dots
+	display: flex
+	justify-content: center
+	margin-top: 45px
+	button
+		width: 24px
+		height: 24px
+		border-radius: 50%
+		border: 1px solid $global !important
+		margin: 0 6px
+		outline: none
+	button.active
+		background-color: $global
+
+.speedbar
+	height: 100px
+	background-color: #8900ff
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-bottom: 72px
+	&_header
+		position: relative
+		padding: 0 100px
+		background-color: #ffffff
+		height: 100%
+		display: flex
+		align-items: center
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			border: 100px solid transparent
+			border-left-color: #8900ff
+			border-right: 0
+			border-top: 0
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			border: 100px solid transparent
+			border-right-color: #8900ff
+			border-left: 0
+			border-bottom: 0
+		h1,h2,h3,h4
+			position: relative
+			font-family: 'Roboto Slab', sans-serif
+			font-size: 24px
+			color: $text-global
+			padding: 0 20px
+			&::before
+				content: ""
+				position: absolute
+				top: 50%
+				right: 0
+				margin-top: -4px
+				width: 8px
+				height: 8px
+				background-color: $text-global
+				border-radius: 50%
+			&::after
+				content: ""
+				position: absolute
+				top: 50%
+				left: 0
+				margin-top: -4px
+				width: 8px
+				height: 8px
+				background-color: $text-global
+				border-radius: 50%
+
+.price-nav
+	margin: 38px auto 90px auto
+	ul
+		display: flex
+		justify-content: center
+		li
+			margin-right: 35px
+			&:last-child
+				margin-right: 0
+			a
+				color: $text-global
+				&:hover
+					text-decoration: underline
+
+.price-list
+	width: 70%
+	display: flex
+	flex-direction: column
+	.item
+		position: relative
+		display: flex
+		justify-content: space-between
+		margin-bottom: 30px
+		&::before
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -45px
+			z-index: -1
+			height: 100%
+			width: 100%
+			border-bottom: 2px dashed rgba(68,8,40,.4)
+		span
+			font-family: 'Roboto Slab', sans-serif
+			height: 35px
+			background-color: #ffffff
+			color: $text-global
+		span:first-child
+			padding-right: 40px
+		span:last-child
+			padding-left: 40px
+
+.tabs-ul
+	margin-top: 72px
+	display: flex
+	justify-content: center
+	margin-bottom: 70px
+	.tabs-ul-active.tabs-ul-item
+		background-color: #8900ff
+		&::after
+			border-left-color: #8900ff
+		&::before
+			border-right-color: #8900ff
+	&-item
+		position: relative
+		cursor: pointer
+		display: flex
+		align-items: center
+		width: 50%
+		height: 70px
+		background-color: #A031FF
+		color: #ffffff
+		font-size: 20px
+		font-family: 'Roboto Slab', sans-serif
+		&:hover
+			background-color: #8900ff
+	&-item:first-child
+		margin-right: 50px * 2
+		padding-right: 45px
+		justify-content: flex-end
+		&:hover::after
+			border-left-color: #8900ff
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			right: -70px
+			border: 70px solid transparent
+			border-left-color: #A031FF
+			border-right: 0
+			border-top: 0
+		
+	&-item:last-child
+		margin-left: 50px * 2
+		padding-left: 45px
+		justify-content: flex-start
+		&:hover::before
+			border-right-color: #8900ff
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: -70px
+			border: 70px solid transparent
+			border-right-color: #A031FF
+			border-left: 0
+			border-bottom: 0
+
+.tabs-content.tabs-ul-active
+	display: block
+.tabs-content
+	display: none
+	font-family: 'Roboto Slab', sans-serif
+	color: $text-content
+	p
+		line-height: 26px
+		margin-bottom: 40px
+		&:last-child
+			margin-bottom: 0
+
+.action-item
+	padding: 38px 68px
+	border: 1px solid rgba(67,0,36,.5)
+	display: flex
+	margin-bottom: 50px
+	&:last-child
+		margin-bottom: 0
+	img
+		display: block
+	&_wrap
+		margin-left: 30px
+		.title
+			font-size: 26px
+			font-weight: bold
+			font-family: 'Roboto Slab', sans-serif
+			margin-bottom: 24px
+			color: $text-global
+		.descr
+			line-height: 26px
+			color: $text-content
+
+.price
+	display: flex
+	flex-direction: column
+	&-item
+		overflow: hidden
+		margin-bottom: 80px
+		display: flex
+		background-color: rgba(243,238,238,.5)
+		&:last-child
+			margin-bottom: 0
+		&:nth-child(2)
+			.price-left
+				order: 1
+			.price-right
+				order: 0
+	&-left, &-right
+		width: 50%
+	&-left
+		order: 0
+		img
+			background-size: cover
+			width: 100%
+			height: 100%
+			max-height: 396px
+	&-right
+		position: relative
+		order: 1
+		padding: 30px 55px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		.title
+			font-family: 'Roboto Slab', sans-serif
+			font-size: 28px
+			font-weight: bold
+			margin-bottom: 18px
+			color: $text-global
+		.price-item-block
+			margin-bottom: 36px
+			&:last-child
+				margin-bottom: 0
+			span
+				color: $text-global
+				display: block
+				margin-bottom: 15px
+				&:last-child
+					margin-bottom: 0
+					font-size: 22px
+					font-weight: bold
+	&-btn
+		// position: absolute
+		// bottom: 30px
+		// left: 55px
+		height: 55px
+		&-active
+			cursor: pointer
+			border-radius: 4px
+			padding: 15px 67px
+			border: 2px solid $text-global
+			font-weight: 500
+			color: $text-global
+			&:hover
+				background-color: $text-global
+				transition: all 0.2s ease-out
+				color: #ffffff
+			&:not(:hover)
+				transition: all 0.2s ease-in
+
+.maps
+	margin-top: 80px
+
+@import "_media"
